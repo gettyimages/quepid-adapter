@@ -9,14 +9,14 @@
 		<relativePath/>
 	</parent>
 	<groupId>com.gettyimages</groupId>
-	<artifactId>quepid-proxy</artifactId>
+	<artifactId>quepid-adapter</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>quepid-proxy</name>
-	<description>quepid-proxy</description>
+	<name>quepid-adapter</name>
+	<description>quepid-adapter</description>
 	<modules>
-		<module>quepid-proxy-uspto</module>
-		<module>quepid-proxy-model</module>
-		<module>quepid-proxy-service</module>
+		<module>quepid-adapter-uspto</module>
+		<module>quepid-adapter-model</module>
+		<module>quepid-adapter-service</module>
 	</modules>
 </project>

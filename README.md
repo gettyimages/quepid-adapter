@@ -1,14 +1,14 @@
-# Quepid Proxy
+# Quepid Adapter
 
-This is an implementation of a proxy service that allows [Quepid](https://github.com/o19s/quepid) to communicate with Solr instances through middleware search API services.
+This is an implementation of an adapter service that allows [Quepid](https://github.com/o19s/quepid) to communicate with Solr instances through middleware search API services.
 
-This project allows you to perform human judgments of search results when your backend instance of Solr is accessed through an API that abstracts and controls the search queries and results. The proxy works by emulating the Solr search API in front of the middleware search service. This makes Quepid think it is talking directly to Solr and enables the use of Quepid.
+This project allows you to perform human judgments of search results when your backend instance of Solr is accessed through an API that abstracts and controls the search queries and results. The adapter works by emulating the Solr search API in front of the middleware search service. This makes Quepid think it is talking directly to Solr and enables the use of Quepid.
 
-## Running the Proxy
+## Running the Adapter
 
 ```shell
-git clone https://github.com/gettyimages/quepid-proxy.git
-cd quepid-proxy
+git clone https://github.com/gettyimages/quepid-adapter.git
+cd quepid-adapter
 mvn clean install
 mvn spring-boot:run
 ```
@@ -16,10 +16,10 @@ mvn spring-boot:run
 After compiling you can also just run the jar file:
 
 ```shell
-java -jar ./quepid-proxy-service/target/quepid-proxy.jar
+java -jar ./quepid-adapter-service/target/quepid-adapter.jar
 ```
 
-This will start the proxy on port `8080` (unless the port has been changed in the `application.properties`).
+This will start the adapter on port `8080` (unless the port has been changed in the `application.properties`).
 
 You can now add a new case to Quepid by using `http://localhost:8080/search` as the Solr endpoint. The following Quepid operations are supported:
 
@@ -29,13 +29,13 @@ You can now add a new case to Quepid by using `http://localhost:8080/search` as 
 
 ## Custom Implementations
 
-Because all middleware search services are propietary and different, a custom implementation is required for each one. Look at the `quepid-proxy-uspto` project for an example implementation that uses the USPTO search API.
+Because all middleware search services are propietary and different, a custom implementation is required for each one. Look at the `quepid-adapter-uspto` project for an example implementation that uses the USPTO search API.
 
-To make this project work with your middleware API service, simply copy the `quepid-proxy-uspto` project, modify the API definitions, and modify how the middleware search responses get converted to Solr documents. You will likely need to do this for two functions - one to perform the search and another get a single document by some unique identifier.
+To make this project work with your middleware API service, simply copy the `quepid-adapter-uspto` project, modify the API definitions, and modify how the middleware search responses get converted to Solr documents. You will likely need to do this for two functions - one to perform the search and another get a single document by some unique identifier.
 
 ## Issues and Improvements
 
-Contributions are welcome. Please open a [GitHub issue](https://github.com/gettyimages/quepid-proxy/issues).
+Contributions are welcome. Please open a [GitHub issue](https://github.com/gettyimages/quepid-adapter/issues).
 
 # License
 

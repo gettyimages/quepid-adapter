@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.gettyimages</groupId>
-		<artifactId>quepid-proxy</artifactId>
+		<artifactId>quepid-adapter</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>quepid-proxy-model</artifactId>
-	<name>quepid-proxy-model</name>
+	<artifactId>quepid-adapter-model</artifactId>
+	<name>quepid-adapter-model</name>
 	<packaging>jar</packaging>
 	<dependencies>
 		<dependency>

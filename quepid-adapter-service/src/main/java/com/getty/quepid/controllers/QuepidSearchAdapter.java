@@ -45,9 +45,9 @@ import java.util.regex.Pattern;
 
 @CrossOrigin(origins = "*")
 @RestController
-public class QuepidSearchProxy {
+public class QuepidSearchAdapter {
 
-    private final Logger LOGGER = LoggerFactory.getLogger(QuepidSearchProxy.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(QuepidSearchAdapter.class);
 
     @Autowired
     private Gson gson;
